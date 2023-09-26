@@ -1,0 +1,16 @@
+.list-group {
+    border-radius: 0px;
+}
+
+.list-group-item.active {
+    color: black;
+    border: none;
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+.list-group-item {
+    color: red;
+    border: none;
+    background-color: white;
+}
