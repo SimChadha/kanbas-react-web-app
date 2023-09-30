@@ -1,0 +1,44 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list-group-item {
+    color: white;
+    border: none;
+    background-color: black;
+}
+
+.list-group {
+    border-radius: 0px;
+}
+
+.list-group-item.active.kan-nav { 
+    color: red;
+    background-color: white;
+    border: none;
+}
+
+.list-group-item.kan-nav a {
+    color: white;
+}
+
+.list-group-item.active.kan-nav a {
+    color: red;
+}
+
+.menu-link { 
+    text-decoration: none;
+    color: white;
+}
+
+.list-group-item.active.kan-nav .menu-link:hover {
+    color: red;
+}
+
+.list-group-item.kan-nav .menu-link:hover{ 
+    color: white;
+}
+
+.red-icon {
+    color: red;
+}
