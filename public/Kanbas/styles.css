@@ -1,8 +1,8 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Arial;
 }
 
-.list-group-item {
+.list-group-item.kan-nav {
     color: white;
     border: none;
     background-color: black;
@@ -26,7 +26,7 @@ body {
     color: red;
 }
 
-.menu-link { 
+.kan-nav .menu-link { 
     text-decoration: none;
     color: white;
 }
@@ -41,4 +41,30 @@ body {
 
 .red-icon {
     color: red;
+}
+
+/* Mini kan nav bar */
+
+.list-group-item.mini-nav {
+    color: red;
+    border: none;
+    background-color: white;
+}
+
+.mini-nav .menu-link { 
+    text-decoration: none;
+    color: red;
+}
+
+.list-group-item.mini-nav .menu-link:hover{ 
+    color: red;
+}
+
+.close-link {
+    color: #a2a7ae;
+    text-decoration: none;
+}
+
+.close-link:hover {
+    color: #a2a7ae;
 }

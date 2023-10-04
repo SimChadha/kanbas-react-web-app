@@ -2,6 +2,10 @@ body {
     font-family: Verdana, Arial;
 }
 
+.container {
+    max-width: 100%;
+}
+
 .list-group-item.kan-nav {
     color: white;
     border: none;
@@ -92,6 +96,11 @@ body {
     color: red;
 }
 
+.acc-link:hover{ 
+    color: red;
+    text-decoration: none;
+}
+
 .list-group-item.active.acc-nav-item .acc-link:hover {
     color: black;
 }
@@ -101,8 +110,65 @@ body {
     text-decoration: none;
 }
 
-.edit-button {
+.gray-button {
     background-color: #e6e6e6;
+    border-width: thin;
     border-color: #b5b3b3;
     color: black;
+}
+
+.green-button {
+    background-color: green!important;
+    border-width: thin;
+    border-color: #b5b3b3!important;
+    color: white!important;
+}
+
+.red-button {
+    background-color: red;
+    border-width: thin;
+    border-color: #b5b3b3;
+    color: white;
+}
+
+.bold-text {
+    font-weight: 800;
+}
+
+.row.no-x-padding>* {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.section-menu-text {
+    font-size: x-small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #b5b3b3;
+    padding-bottom: 10px;
+}
+
+/* Module list styles */
+
+.module-item {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) green;
+    border-width: 2px 2px 2px thick;
+}
+
+.xs-text {
+    font-size: x-small;
+}
+
+.sm-text {
+    font-size: small;
+}
+
+.md-text {
+    font-size: medium;
+}
+
+.gray-col { 
+    color: #b5b3b3;
 }

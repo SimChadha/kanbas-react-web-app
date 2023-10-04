@@ -2,6 +2,10 @@ body {
     font-family: Verdana, Arial;
 }
 
+.container {
+    max-width: 100%;
+}
+
 .list-group-item.kan-nav {
     color: white;
     border: none;
@@ -63,46 +67,39 @@ body {
     margin-left: 0px!important;
 }
 
-/* Acc Styling */
-
-.list-group-item:first-child {
-    border-top-left-radius: 0;
+.grey-text {
+    color: #b5b3b3;
 }
 
-.list-group-item.active.acc-nav-item {
-    color: black;
-    border: none;
-    background-color: white;
-    border-left: 2px solid black;
+.bold-text {
+    font-weight: 600;
+    font-size: large;
 }
 
-.list-group-item.acc-nav-item {
-    color: red;
-    border: none;
-    background-color: white;
-    padding: 0.5rem!important;
+.card {
+    width: 270px;
+    margin: 30px;
 }
 
-.list-group-item.active.acc-nav-item .acc-link {
-    color: black;
+.color-div {
+    height: 100px;
 }
 
-.acc-link { 
-    text-decoration: none;
-    color: red;
-}
-
-.list-group-item.active.acc-nav-item .acc-link:hover {
-    color: black;
-}
-
-.list-group-item.acc-nav-item .acc-link:hover{ 
-    color: red;
+.card-course {
+    color: rgb(13, 202, 240);
     text-decoration: none;
 }
 
-.edit-button {
-    background-color: #e6e6e6;
-    border-color: #b5b3b3;
-    color: black;
+.course-link {
+    text-decoration: none;
+    font-size: small;
+}
+
+.text-xs {
+    font-size: xx-small;
+}
+
+.course-link:hover {
+    text-decoration: none;
+    color: inherit;
 }

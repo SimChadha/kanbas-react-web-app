@@ -1,5 +1,9 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Arial;
+}
+
+.container {
+    max-width: 100%;
 }
 
 .list-group-item.kan-nav {
@@ -10,6 +14,10 @@ body {
 
 .list-group {
     border-radius: 0px;
+}
+
+.list-group.kan-nav-group {
+    width: 85px;
 }
 
 .list-group-item.active.kan-nav { 
@@ -29,6 +37,7 @@ body {
 .menu-link { 
     text-decoration: none;
     color: white;
+    font-size: 0.75em;
 }
 
 .list-group-item.active.kan-nav .menu-link:hover {
@@ -42,6 +51,23 @@ body {
 .red-icon {
     color: red;
 }
+
+.first-col {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 10px;
+}
+
+.second-col {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.no-left-margin {
+    margin-left: 0px!important;
+}
+
+/* Acc Styling */
 
 .list-group-item:first-child {
     border-top-left-radius: 0;
@@ -70,6 +96,11 @@ body {
     color: red;
 }
 
+.acc-link:hover{ 
+    color: red;
+    text-decoration: none;
+}
+
 .list-group-item.active.acc-nav-item .acc-link:hover {
     color: black;
 }
@@ -79,11 +110,17 @@ body {
     text-decoration: none;
 }
 
-.first-col {
-    padding-left: 0px;
-    margin-right: 10px;
+.edit-button {
+    background-color: #e6e6e6;
+    border-color: #b5b3b3;
+    color: black;
 }
 
-.no-left-margin {
-    margin-left: 0px!important;
+.bold-text {
+    font-weight: 800;
+}
+
+.row.no-x-padding>* {
+    padding-left: 0px;
+    padding-right: 0px;
 }

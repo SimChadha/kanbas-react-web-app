@@ -4,167 +4,354 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/355ade2d4c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <table width="100%">
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <ul>
-                        <li>
-                            <a href="/Kanbas/Account/index.html">Account</a>
-                        </li>
-                        <li>
-                            <a href="#">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Courses/index.html">Courses</a>
-                        </li>
-                        <li>
-                            <a href="#">Calendar</a>
-                        </li>
-                        <li>
-                            <a href="#">Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#">History</a>
-                        </li>
-                        <li>
-                            <a href="#">Studio</a>
-                        </li>
-                        <li>
-                            <a href="#">Commons</a>
-                        </li>
-                        <li>
-                            <a href="#">Help</a>
-                        </li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <ul>
-                        <li>
-                            <a href="/Kanbas/Courses/Home/index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Modules</a>
-                        </li>
-                        <li>
-                            <a href="#">Piazza</a>
-                        </li>
-                        <li>
-                            <a href="#">Zoom Meetings</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Courses/Assignments/index.html">Assignments</a>
-                        </li>
-                        <li>
-                            <a href="#">Quizzes</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Courses/Grades/index.html">Grades</a>
-                        </li>
-                        <li>
-                            <a href="#">People</a>
-                        </li>
-                        <li>
-                            <a href="#">Panopto Video</a>
-                        </li>
-                        <li>
-                            <a href="#">Discussions</a>
-                        </li>
-                        <li>
-                            <a href="#">Announcements</a>
-                        </li>
-                        <li>
-                            <a href="#">Pages</a>
-                        </li>
-                        <li>
-                            <a href="#">Files</a>
-                        </li>
-                        <li>
-                            <a href="#">Rubrics</a>
-                        </li>
-                        <li>
-                            <a href="#">Outcomes</a>
-                        </li>
-                        <li>
-                            <a href="#">Collaborations</a>
-                        </li>
-                        <li>
-                            <a href="#">Syllabus</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings</a>
-                        </li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <select>
-                        <option>Gradebook</option>
-                    </select>
-                    <button>Import</button>
-                    <select>
-                        <option>Export 1</option>
-                        <option>Export 2</option>
-                    </select>
-                    <button>Configure</button>
+    <div class="container no-left-margin">
+        <div class="row justify-content-start">
+            <div class="d-none d-md-block col-2 col-lg-1 first-col">
+                <ul class="list-group bg-black min-vh-100 kan-nav-group h-100">
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center" href="/Kanbas/index.html">
+                            <img src="/images/northeastern_logo.png" width="80" height="80" />
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2"
+                            href="/Kanbas/Account/index.html">
+                            <div>
+                                <span class="fa-stack">
+                                    <i class="fa fa-solid fa-user fa-stack-1x" style="color: #a2a7ae;"></i>
+                                    <i class="fa fa-regular fa-circle fa-stack-2x" style="color: #757b84;"></i>
+                                </span>
+                            </div>
+                            Account
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2"
+                            href="/Kanbas/Dashboard/index.html">
+                            <i class="fa fa-thin fa-gauge fa-2x red-icon"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav active">
+                        <a class="menu-link flex-column d-flex align-items-center p-2"
+                            href="/Kanbas/Courses/Home/index.html">
+                            <i class="fa fa-thin fa-book fa-2x red-icon"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-thin fa-calendar fa-2x red-icon"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-regular fa-envelope fa-2x red-icon"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-regular fa-clock fa-2x red-icon"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-solid fa-display fa-2x red-icon"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <span class="fa-stack">
+                                <i class="fa fa-solid fa-c fa-stack-2x red-icon"></i>
+                                <i class="fa fa-solid fa-arrow-right fa-stack-1x red-icon"></i>
+                            </span>
+                            Commons
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <span class="fa-stack">
+                                <i class="fa fa-solid fa-question fa-stack-1x red-icon"></i>
+                                <i class="fa fa-regular fa-circle fa-stack-2x red-icon"></i>
+                            </span>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col second-col">
+                <div class="float-start mt-2">
+                    <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+                        <ol class="breadcrumb">
+                            <a href="/Kanbas/mini-kanbas-navbar.html" class="acc-link">
+                                <i class="d-block d-md-none fa-solid fa-bars ms-2 pe-3" style="color: red;"></i>
+                            </a>
+                            <i class="d-none d-md-block fa-solid fa-bars pe-3" style="color: red;"></i>
+                            <li class="breadcrumb-item"><a href="/Kanbas/Courses/Home/index.html"
+                                    class="acc-link">CS4550.12631.202410</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Grades</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="float-end pe-2 mt-2">
+                    <a href="/Kanbas/mini-course-navbar.html" class="acc-link">
+                        <i class="d-block d-md-none fa-solid fa-caret-down ms-2 pe-3" style="color: black;"></i>
+                    </a>
+                </div>
+                <div class="float-none"></div>
+                <hr class="mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="d-none d-md-block col-1 me-5">
+                            <div class="section-menu-text">202410.1 Fall 20234 Semester</div>
+                            <ul class="list-group ml-5">
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="/Kanbas/Courses/Home/index.html">
+                                        Home
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Modules
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Piazza
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Zoom Meetings
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="/Kanbas/Courses/Assignments/index.html">
+                                        Assignments
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Quizzes
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item active">
+                                    <a class="acc-link" href="/Kanbas/Courses/Grades/index.html">
+                                        Grades
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        People
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Panopto Video
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Discussions
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Announcements
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Pages
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Files
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Rubrics
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Outcomes
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Collaborations
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Syllabus
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Progress Reports (EAB Navigate)
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Settings
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col px-5">
+                            <div class="float-end">
+                                <button class="btn btn-secondary gray-button">
+                                    <i class="fa-solid fa-file-import"></i>
+                                    Import
+                                </button>
+                                <button class="btn btn-secondary gray-button dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <i class="fa-solid fa-file-export"></i>
+                                    Export
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Export</a></li>
+                                    </ul>
+                                </button>
+                                <button class="btn btn-secondary gray-button"><i class="fa-solid fa-gear"></i></button>
+                            </div>
 
-                    <h3>Student Names</h3>
-                    <input type="text" placeholder="Seach Students"/>
+                            <div class="container mt-4">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="bold-text">Student Names</div>
+                                        <div class="input-group">
+                                            <i class="fa-solid fa-magnifying-glass input-group-text"></i>
+                                            <input type="text" class="form-control" placeholder="Seach Students" />
+                                            <i class="fa-solid fa-caret-down input-group-text"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="bold-text">Assignment Names</div>
+                                        <div class="input-group">
+                                            <i class="fa-solid fa-magnifying-glass input-group-text"></i>
+                                            <input type="text" class="form-control" placeholder="Seach Assignments" />
+                                            <i class="fa-solid fa-caret-down input-group-text"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary gray-button mt-4">
+                                <i class="fa-solid fa-filter"></i>
+                                Apply Filters
+                            </button>
+                            <br />
 
-                    <h3>Assignment Names</h3>
-                    <input type="text" placeholder="Seach Assignments"/>
-                    <div>
-                        <br/>
-                        <button>Apply Filters</button>
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered mt-4">
+                                    <thead>
+                                        <tr class="table-secondary">
+                                            <th>Student Name</th>
+                                            <th>A1 - HTML</th>
+                                            <th>A2 - CSS</th>
+                                            <th>A3 - Bootstrap</th>
+                                            <th>A4 - Javascript</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-danger">Rey "Skywalker"</td>
+                                            <td class="text-center">50</td>
+                                            <td class="text-center">75</td>
+                                            <td><input class="form-control text-center" value="90"></input></td>
+                                            <td class="text-center">92</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Ahsoka Tano</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">88</td>
+                                            <td class="text-center">98</td>
+                                            <td><input class="form-control text-center" value="72"></input></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Pong Krell</td>
+                                            <td><input class="form-control text-center" value="0"></input></td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Admiral Thrawn</td>
+                                            <td class="text-center">20</td>
+                                            <td><input class="form-control text-center" value="15"></input></td>
+                                            <td class="text-center">64</td>
+                                            <td class="text-center">56</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Student</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Student</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Student</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Student</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Student</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-danger">Student</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                            <td class="text-center">100</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <br/>
-                    <table border="1" width="100%">
-                        <thead>
-                            <tr>
-                                <th>Student Name</th>
-                                <th>A1 - HTML</th>
-                                <th>A2 - CSS</th>
-                                <th>A3 - Bootstrap</th>
-                                <th>A4 - Javascript</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Rey "Skywalker"</td>
-                                <td>50</td>
-                                <td>75</td>
-                                <td><input value="90"></input></td>
-                                <td>92</td>
-                            </tr>
-                            <tr>
-                                <td>Ahsoka Tano</td>
-                                <td>100</td>
-                                <td>88</td>
-                                <td>98</td>
-                                <td><input value="72"></input></td>
-                            </tr>
-                            <tr>
-                                <td>Pong Krell</td>
-                                <td><input value="0"></input></td>
-                                <td>100</td>
-                                <td>100</td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>Admiral Thrawn</td>
-                                <td>20</td>
-                                <td><input value="15"></input></td>
-                                <td>64</td>
-                                <td>56</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

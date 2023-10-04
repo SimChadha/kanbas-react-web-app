@@ -4,145 +4,274 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/355ade2d4c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <table>
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <ul>
-                        <li>
-                            <a href="/Kanbas/Account/index.html">Account</a>
-                        </li>
-                        <li>
-                            <a href="#">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Courses/index.html">Courses</a>
-                        </li>
-                        <li>
-                            <a href="#">Calendar</a>
-                        </li>
-                        <li>
-                            <a href="#">Inbox</a>
-                        </li>
-                        <li>
-                            <a href="#">History</a>
-                        </li>
-                        <li>
-                            <a href="#">Studio</a>
-                        </li>
-                        <li>
-                            <a href="#">Commons</a>
-                        </li>
-                        <li>
-                            <a href="#">Help</a>
-                        </li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <ul>
-                        <li>
-                            <a href="#">Notifications</a>
-                        </li>
-                        <li>
-                            <a href="/Kanbas/Account/Profile/index.html">Profile</a>
-                        </li>
-                        <li>
-                            <a href="#">Files</a>
-                        </li>
-                        <li>
-                            <a href="#">Settings</a>
-                        </li>
-                        <li>
-                            <a href="#">ePortfolios</a>
-                        </li>
-                        <li>
-                            <a href="#">Shared Content</a>
-                        </li>
-                        <li>
-                            <a href="#">The Hub</a>
-                        </li>
-                        <li>
-                            <a href="#">Qwickly Course Tools</a>
-                        </li>
-                        <li>
-                            <a href="#">Global Announcements</a>
-                        </li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <h1>Anakin Skywalker</h1>
-                    <form action="/Kanbas/Account/Profile/index.html">
-                        <label for="fullName">Name:*</label>
-                        <input type="text" name="fullName" value="Anakin Skywalker" />
-                        <label for="pronouns">Pronouns</label>
-                        <select name="pronouns">
-                            <option>None</option>
-                        </select> <br />
-
-                        <div>
-                            <br />
-                            <label for="title">Title:</label>
-                            <input type="text" name="title" />
+    <div class="container mx-0">
+        <div class="row justify-content-start">
+            <div class="col-1 first-col">
+                <ul class="list-group bg-black min-vh-100 kan-nav-group h-100">
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center" href="/Kanbas/index.html">
+                            <img src="/images/northeastern_logo.png" width="80" height="80" />
+                        </a>
+                    </li>
+                    <li class="list-group-item active kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2"
+                            href="/Kanbas/Account/index.html">
+                            <div>
+                                <span class="fa-stack">
+                                    <i class="fa fa-solid fa-user fa-stack-1x" style="color: #a2a7ae;"></i>
+                                    <i class="fa fa-regular fa-circle fa-stack-2x" style="color: #757b84;"></i>
+                                </span>
+                            </div>
+                            Account
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2"
+                            href="/Kanbas/Dashboard/index.html">
+                            <i class="fa fa-thin fa-gauge fa-2x red-icon"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2"
+                            href="/Kanbas/Courses/index.html">
+                            <i class="fa fa-thin fa-book fa-2x red-icon"></i>
+                            Courses
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-thin fa-calendar fa-2x red-icon"></i>
+                            Calendar
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-regular fa-envelope fa-2x red-icon"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-regular fa-clock fa-2x red-icon"></i>
+                            History
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <i class="fa fa-solid fa-display fa-2x red-icon"></i>
+                            Studio
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <span class="fa-stack">
+                                <i class="fa fa-solid fa-c fa-stack-2x red-icon"></i>
+                                <i class="fa fa-solid fa-arrow-right fa-stack-1x red-icon"></i>
+                            </span>
+                            Commons
+                        </a>
+                    </li>
+                    <li class="list-group-item kan-nav">
+                        <a class="menu-link flex-column d-flex align-items-center p-2" href="#">
+                            <span class="fa-stack">
+                                <i class="fa fa-solid fa-question fa-stack-1x red-icon"></i>
+                                <i class="fa fa-regular fa-circle fa-stack-2x red-icon"></i>
+                            </span>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10 flex-fill second-col">
+                <i class="fa-solid fa-bars" style="color: red;"></i>
+                Anakin Skywalker's Profile
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-1 me-5">
+                            <ul class="list-group ml-5">
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Notifications
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item active">
+                                    <a class="acc-link" href="/Kanbas/Account/Profile/index.html">
+                                        Profile
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Files
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Settings
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        ePortfolios
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Shared Content
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        The Hub
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Qwickly Course Tools
+                                    </a>
+                                </li>
+                                <li class="list-group-item acc-nav-item">
+                                    <a class="acc-link" href="#">
+                                        Global Announcements
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                        <div class="col-10">
+                            <form action="/Kanbas/Account/Profile/index.html">
+                                <div class="float-end">
+                                    <button class="btn btn-secondary edit-button">
+                                        <i class="fa-solid fa-pencil"></i>
+                                        Cancel Editing
+                                    </button>
+                                </div>
+                                <div class="float-start ps-4 mb-2">
+                                    <div>
+                                        <span class="fa-stack fa-4x mb-1">
+                                            <i class="fa fa-solid fa-user fa-stack-1x" style="color: #a2a7ae;"></i>
+                                            <i class="fa fa-regular fa-circle fa-stack-2x" style="color: #757b84;"></i>
+                                        </span>
+                                    </div>
 
-                        <h2>Contact</h2>
-                        No registered services, you can add some on the <a href="#">settings</a> page <br />
+                                    <div class="mb-1">
+                                        <label for="nameInput" class="form-label">Name:*</label>
+                                        <input type="text" class="form-control" id="nameInput" value="Anakin Skywalker">
+                                    </div>
 
-                        <h2>Contact</h2>
-                        No registered services, you can add some on the <a href="#">settings</a> page <br />
+                                    <div class="mb-1 w-75">
+                                        <label for="pronounInput" class="form-label">Pronouns:</label>
+                                        <select class="form-select" id="pronounInput">
+                                            <option selected>None</option>
+                                        </select>
+                                    </div>
 
-                        <h2>Biography</h2> <br />
-                        Jedi master, almost-council member, future Supreme Commander of the Galactic Empire
-                        <br />
-                        <textarea rows="5"
-                            cols="70">Jedi master, almost-council member, future Supreme Commander of the Galactic Empire</textarea>
-                        <br />
+                                    <div class="mb-5">
+                                        <label for="titleInput" class="form-label">Title:</label>
+                                        <input type="text" class="form-control" id="titleInput">
+                                    </div>
 
-                        <h2>Links</h2>
-                        <ul>
-                            <li>
-                                <a href="https://starwars.fandom.com/wiki/Anakin_Skywalker">Wookieepedia</a>
-                                <span style="color: #0000FF">&#128279 Links to an external site</span>
-                            </li>
-                        </ul> <br />
+                                    <h3>Contact</h3>
+                                    <div class="mb-4">
+                                        No registered services, you can add some on the <a class="acc-link"
+                                            href="#">settings</a>
+                                        page
+                                    </div>
 
-                        <table width="50%">
-                            <tbody>
-                                <tr>
-                                    <td style="text-align: center">
-                                        <b>Title</b>
-                                    </td>
-                                    <td style="text-align: center">
-                                        <b>URL</b>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                    <h3 class="mt-4">Biography</h3>
+                                    <div class="mb-4">
+                                        <textarea class="form-control" id="bioInput" rows="4">Jedi master, almost-council member, Supreme Commander of the Galactic Empire
+                                        </textarea>
+                                    </div>
 
-                        <input type="text" value="Wookieepedia" />
-                        &#8594
-                        <input type="text" value="https://starwars.fandom.com/wiki/Anakin_Skywalker" />
-                        <a href="#">Remove</a>
-                        <br />
+                                    <h3>Links</h3>
+                                    <div class="container text-center">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="bold-text">
+                                                    Title
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="bold-text">
+                                                    URL
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row no-x-padding">
+                                            <div class="col-5">
+                                                <input type="text" class="form-control" id="titleInput1"
+                                                    value="Wookieepedia">
+                                            </div>
+                                            <div class="col-2">
+                                                <i class="fa-solid fa-arrow-right align-middle"
+                                                    style="color: black"></i>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="container">
+                                                    <div class="row no-x-padding py-0">
+                                                        <div class="col-11">
+                                                            <input type="text" class="form-control" id="urlInput1"
+                                                                value="https://starwars.fandom.com/wiki/Anakin_Skywalker">
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <i class="fa-solid fa-xmark align-middle fa-2x ps-1" style="color: red"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row no-x-padding">
+                                            <div class="col-5">
+                                                <input type="text" class="form-control" id="urlInput2"
+                                                    value="YouTube">
+                                            </div>
+                                            <div class="col-2">
+                                                <i class="fa-solid fa-arrow-right align-middle"
+                                                    style="color: black"></i>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="container">
+                                                    <div class="row no-x-padding py-0">
+                                                        <div class="col-11">
+                                                            <input type="text" class="form-control" id="titleInput2"
+                                                                value="https://www.youtube.com/@WebDevTV">
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <i class="fa-solid fa-xmark align-middle fa-2x ps-1" style="color: red"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row no-x-padding">
+                                            <div class="col-4">
+                                                <button type="button" class="btn btn-secondary edit-button">Add another link</button>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                        <button type="button">Add another link</button>
-                        <br />
-
-                        <button type="button">Cancel</button>
-                        <button>Save Profile</button>
-                        <br />
-
-                        <button type="button">Edit Profile</button>
-                        <button>Cancel Editing</button>
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    </form>
+                                    <hr />
+                                    <div class="float-end">
+                                        <button type="submit" class="btn btn-secondary edit-button">Cancel</button>
+                                        <button type="submit" class="btn btn-danger">Save Profile</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>
