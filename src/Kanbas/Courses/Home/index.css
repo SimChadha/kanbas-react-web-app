@@ -1,0 +1,174 @@
+body {
+    font-family: Verdana, Arial;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.list-group-item.kan-nav {
+    color: white;
+    border: none;
+    background-color: black;
+}
+
+.list-group {
+    border-radius: 0px;
+}
+
+.list-group.kan-nav-group {
+    width: 85px;
+}
+
+.list-group-item.active.kan-nav { 
+    color: red;
+    background-color: white;
+    border: none;
+}
+
+.list-group-item.kan-nav a {
+    color: white;
+}
+
+.list-group-item.active.kan-nav a {
+    color: red;
+}
+
+.menu-link { 
+    text-decoration: none;
+    color: white;
+    font-size: 0.75em;
+}
+
+.list-group-item.active.kan-nav .menu-link:hover {
+    color: red;
+}
+
+.list-group-item.kan-nav .menu-link:hover{ 
+    color: white;
+}
+
+.red-icon {
+    color: red;
+}
+
+.first-col {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 10px;
+}
+
+.second-col {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.no-left-margin {
+    margin-left: 0px!important;
+}
+
+/* Acc Styling */
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+}
+
+.list-group-item.active.acc-nav-item {
+    color: black;
+    border: none;
+    background-color: white;
+    border-left: 2px solid black;
+}
+
+.list-group-item.acc-nav-item {
+    color: red;
+    border: none;
+    background-color: white;
+    padding: 0.5rem!important;
+}
+
+.list-group-item.active.acc-nav-item .acc-link {
+    color: black;
+}
+
+.acc-link { 
+    text-decoration: none;
+    color: red;
+}
+
+.acc-link:hover{ 
+    color: red;
+    text-decoration: none;
+}
+
+.list-group-item.active.acc-nav-item .acc-link:hover {
+    color: black;
+}
+
+.list-group-item.acc-nav-item .acc-link:hover{ 
+    color: red;
+    text-decoration: none;
+}
+
+.gray-button {
+    background-color: #e6e6e6;
+    border-width: thin;
+    border-color: #b5b3b3;
+    color: black;
+}
+
+.green-button {
+    background-color: green!important;
+    border-width: thin;
+    border-color: #b5b3b3!important;
+    color: white!important;
+}
+
+.red-button {
+    background-color: red;
+    border-width: thin;
+    border-color: #b5b3b3;
+    color: white;
+}
+
+.bold-text {
+    font-weight: 800;
+}
+
+.row.no-x-padding>* {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.section-menu-text {
+    font-size: x-small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #b5b3b3;
+    padding-bottom: 10px;
+}
+
+/* Module list styles */
+
+.module-item {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) green;
+    border-width: 2px 2px 2px thick;
+}
+
+.xs-text {
+    font-size: x-small;
+}
+
+.sm-text {
+    font-size: small;
+}
+
+.md-text {
+    font-size: medium;
+}
+
+.gray-col { 
+    color: #b5b3b3;
+}

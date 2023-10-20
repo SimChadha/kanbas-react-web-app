@@ -15,19 +15,19 @@ function AssignmentEditor() {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
-    <div>
+    <div className="ms-5">
       <h2>Assignment Name</h2>
       <pre>
         <code>{JSON.stringify(params, null, 2)}</code>
       </pre>
-      <input value={assignment.title} className="form-control mb-2" />
+      <input defaultValue={assignment.title} className="form-control mb-2" />
       <Link
         to={`/Kanbas/Courses/${courseId}/Assignments`}
-        className="btn btn-danger"
+        className="btn btn-secondary s-button me-2"
       >
         Cancel
       </Link>
-      <button onClick={handleSave} className="btn btn-success me-2">
+      <button onClick={handleSave} className="btn btn-danger p-button me-2">
         Save
       </button>
     </div>
