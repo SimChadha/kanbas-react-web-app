@@ -1,0 +1,27 @@
+.card {
+    width: 270px;
+    margin: 30px;
+}
+
+.color-div {
+    height: 100px;
+}
+
+.card-course {
+    color: rgb(13, 202, 240);
+    text-decoration: none;
+}
+
+.course-link {
+    text-decoration: none;
+    font-size: small;
+}
+
+.text-xs {
+    font-size: xx-small;
+}
+
+.course-link:hover {
+    text-decoration: none;
+    color: inherit;
+}

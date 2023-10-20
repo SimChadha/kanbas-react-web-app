@@ -1,0 +1,25 @@
+.wd-kanbas-navigation {
+  background: black;
+  border-radius: 0px;
+  border: none;
+}
+
+.wd-kanbas-navigation a {
+  background-color: black;
+  color: red;
+  border-radius: 0px;
+  border: none;
+}
+
+.white-color {
+  color: white;
+}
+
+.wd-kanbas-navigation a.active .white-color {
+  color: red;
+}
+
+.wd-kanbas-navigation a.active {
+  background-color: white;
+  color: red;
+}
