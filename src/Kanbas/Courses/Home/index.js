@@ -66,7 +66,7 @@ function Home() {
             <div class="col xs-text text-start">
               <div>
 
-                <Link className="acc-link"> {assignment.title}</Link>
+                <Link className="acc-link"> {assignment ? assignment.title ?? "Assignment" : "Assignment"}</Link>
               </div>
               100 points &#183 Sep 18 at 11:59PM
             </div>

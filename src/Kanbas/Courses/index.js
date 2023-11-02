@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import { useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import { Routes, Route, Navigate, Link } from "react-router-dom";
@@ -9,9 +8,9 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { FaBars } from "react-icons/fa";
 import Grades from "./Grades";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id == courseId);
   return (
     <div className="container">
       <div className="row">
