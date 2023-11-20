@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 function WorkingWithObjects() {
-  const URL = "http://localhost:4000/a5/assignment";
+  const URL = "https://kanbas-node-server-app-s40m.onrender.com/a5/assignment";
   const [assignment, setAssignment] = useState({
     id: 1,
     title: "NodeJS Assignment",
