@@ -28,7 +28,7 @@ function Dashboard(
             <Form.Control value={currentCourse.endDate} type="date" placeholder="End Date" onChange={(e) => setCurrentCourse({ ...currentCourse, endDate: e.target.value })} />
           </Col>
           <Col>
-            <Button variant='primary' onClick={updateCourse}>Update</Button>
+            <Button variant='primary' onClick={() => updateCourse(currentCourse)}>Update</Button>
           </Col>
           <Col>
             <Button variant='success' onClick={addNewCourse}>+ Add Course</Button>
@@ -36,16 +36,19 @@ function Dashboard(
         </Row>
       </Form>
       <div class="d-flex flex-row flex-wrap">
-        {courses.map((course) => (
+        {courses && courses.map((course) => (
           <Link
-            key={course._id}
-            to={`/Kanbas/Courses/${course._id}`}
+            key={course._id.$oid}
+            to={`/Kanbas/Courses/${course._id.$oid}`}
             className="list-group-item course-link"
           >
             <div class="card">
               <div class="card-img-top bg-info w-100 color-div"></div>
               <div class="card-body">
-                <h5 class="card-text text-truncate card-course">{course.number} {course._id} {course.name}</h5>
+                <h5 class="card-text text-truncate card-course">
+                    {course.number} 
+                    {course.name}
+                </h5>
                 <p class="card-text grey-text text-truncate">
                   {course.number}.12631.202410
                 </p>
@@ -66,7 +69,7 @@ function Dashboard(
                     variant="light"
                     onClick={(e) => {
                       e.preventDefault();
-                      deleteCourse(course._id);
+                      deleteCourse(course._id.$oid);
                     }}
                   >
                     <FaTrash />

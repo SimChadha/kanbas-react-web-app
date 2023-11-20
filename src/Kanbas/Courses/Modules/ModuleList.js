@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import { useSelector, useDispatch } from "react-redux";
 import { FaPenSquare, FaTrash } from 'react-icons/fa';
@@ -8,10 +7,46 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import React, { useEffect } from "react";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    let courseNum = "";
+    client.findCourseById(courseId).then((course) => {
+      courseNum = course.number;
+      console.log("COURSE NUMBER: ", courseNum)
+      client.findModulesForCourse(courseNum)
+        .then((modules) => {
+          console.log("MODULES: ", JSON.stringify(modules));
+          dispatch(setModules(modules))
+        }
+        );
+    });
+  }, [courseId]);
+  const handleAddModule = async () => {
+    const courseObject = await client.findCourseById(courseId);
+    const courseNum = courseObject.number;
+    client.createModule(courseId, {...module, course: courseNum}).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
@@ -27,16 +62,15 @@ function ModuleList() {
             <Form.Control value={module.description} type="text" placeholder="Course Number (ex: CS1200)" onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))} />
           </Col>
           <Col>
-            <Button variant='primary' onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</Button>
+            <Button variant='primary' onClick={handleAddModule}>Add</Button>
           </Col>
           <Col>
-            <Button variant='success' onClick={() => dispatch(updateModule(module))}>Update</Button>
+            <Button variant='success' onClick={handleUpdateModule}>Update</Button>
           </Col>
         </Row>
       </Form>
       <ul className="list-group">
         {modules
-          .filter((module) => module.course === courseId)
           .map((module, index) => (
             <li key={index} className="list-group-item">
               <h3>{module.name}</h3>
@@ -48,24 +82,24 @@ function ModuleList() {
                     <p>{lesson.description}</p>
                   </div>
                 ))}
-                <div class="d-flex flex-row flex-wrap">
-                  <Button
-                    variant="light"
-                    onClick={(e) => {
-                      dispatch(setModule(module));
-                    }}
-                  >
-                    <FaPenSquare />
-                  </Button>
-                  <Button
-                    variant="light"
-                    onClick={(e) => {
-                      dispatch(deleteModule(module._id));
-                    }}
-                  >
-                    <FaTrash />
-                  </Button>
-                </div>
+              <div class="d-flex flex-row flex-wrap">
+                <Button
+                  variant="light"
+                  onClick={(e) => {
+                    dispatch(setModule(module));
+                  }}
+                >
+                  <FaPenSquare />
+                </Button>
+                <Button
+                  variant="light"
+                  onClick={(e) => {
+                    handleDeleteModule(module._id);
+                  }}
+                >
+                  <FaTrash />
+                </Button>
+              </div>
             </li>
           ))}
       </ul>
